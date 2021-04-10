@@ -1,0 +1,39 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  --header-height: 70px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  /*  height@.header-inner - height@header */
+  top: calc(var(--header-height) - 100vh);
+  height: 100vh;
+  /* Pexels license, https://www.pexels.com/photo/249203/ */
+  background: no-repeat center fixed url(./pexels-max-deroin-249203.jpg);
+  background-size: cover;
+}
+
+.header-inner {
+  height: var(--header-height);
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  color: white;
+}
+
+main {
+  min-height: calc(100vh - var(--header-height) * 2);
+  padding: 30px;
+}
+
+h2:not(:first-of-type) {
+  padding-top: 30px;
+}
+
+li {
+  padding-top: 5px;
+}
