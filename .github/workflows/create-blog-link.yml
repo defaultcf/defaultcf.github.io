@@ -1,0 +1,14 @@
+name: Create blog links
+on: workflow_dispatch
+jobs:
+  fetch-and-create:
+    runs-on: ubuntu-latest
+    steps:
+      - run: apt install libxml-compiler-perl libjson-xs-perl
+      - run: |
+          curl https://default.cf/blog/feed.xml |\
+          sed -e 's/xmlns=/xmlns:atom=/' |\
+          xml2json -x - -s feed.xsd > _data/feed.json
+      - uses: EndBug/add-and-commit@v7
+        with:
+          message: 'Update feed.json'
