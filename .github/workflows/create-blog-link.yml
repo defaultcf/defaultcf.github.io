@@ -13,3 +13,5 @@ jobs:
       - uses: EndBug/add-and-commit@v7
         with:
           message: 'Update feed.json'
+          committer_name: GitHub Actions
+          committer_email: 41898282+github-actions[bot]@users.noreply.github.com
