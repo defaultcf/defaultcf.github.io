@@ -4,7 +4,7 @@ jobs:
   fetch-and-create:
     runs-on: ubuntu-latest
     steps:
-      - run: sudo apt update && sudo apt install -y libxml-compiler-perl libjson-xs-perl
+      - run: sudo apt update && sudo apt install -y libxml-compile-perl libjson-xs-perl
       - run: |
           curl https://default.cf/blog/feed.xml |\
           sed -e 's/xmlns=/xmlns:atom=/' |\
