@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: sudo apt update && sudo apt install -y libxml-compile-perl libjson-xs-perl
+      - uses: actions/checkout@v2
       - run: |
           curl https://default.cf/blog/feed.xml |\
           sed -e 's/xmlns=/xmlns:atom=/' |\
