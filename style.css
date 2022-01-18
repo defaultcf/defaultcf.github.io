@@ -26,7 +26,9 @@ header {
 }
 
 main {
+  max-width: 1080px;
   min-height: calc(100vh - var(--header-height) * 2);
+  margin: 0 auto;
   padding: 30px;
 }
 
@@ -36,4 +38,13 @@ h2:not(:first-of-type) {
 
 li {
   padding-top: 5px;
+}
+
+.links {
+  display: flex;
+  padding-left: 0;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  list-style-type: none;
 }

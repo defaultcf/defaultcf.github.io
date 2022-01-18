@@ -8,8 +8,9 @@ layout: default
   </div>
 </header>
 <main>
-  <h2>ご挨拶</h2>
-  <p>defaultcf です。ウェブの技術が好きです（できるとは言ってない）。あと、 Virtual YouTuber が好きです。</p>
+  <h2>こんにちは</h2>
+  <p>defaultcf です。ウェブの技術が好きです。あと Virtual YouTuber が好きです。</p>
+  <p>最近は VR にハマっています。</p>
 
   <h2>経歴</h2>
   <ul>
@@ -47,6 +48,11 @@ layout: default
         <li>シスター・クレア</li>
       </ul>
     </li>
+    <li>VR
+      <ul>
+        <li>VRChat</li>
+      </ul>
+    </li>
   </ul>
 
   <h2>ブログ</h2>
@@ -64,7 +70,7 @@ layout: default
   </ul>
 
   <h2>各種リンク</h2>
-  <ul>
+  <ul class="links">
     <li>
       <a href="https://github.com/defaultcf" target="_blank" rel="noopener">
         <i class="fab fa-github fa-fw fa-3x" title="GitHub"></i>GitHub
@@ -82,7 +88,12 @@ layout: default
     </li>
     <li>
       <a href="https://scrapbox.io/defaultcf" target="_blank" rel="noopener">
-        <i class="fas fa-link fa-fw fa-3x" title="Scrapbox"></i>Scrapbox
+        <i class="fas fa-sticky-note fa-fw fa-3x" title="Scrapbox"></i>Scrapbox
+      </a>
+    </li>
+    <li>
+      <a href="https://www.wantedly.com/id/defaultcf" target="_blank" rel="noopener">
+        <i class="fas fa-link fa-fw fa-3x" title="Wantedly"></i>Wantedly
       </a>
     </li>
   </ul>
