@@ -6,6 +6,8 @@ jobs:
     steps:
       - run: sudo apt update && sudo apt install -y libxml-compile-perl libjson-xs-perl
       - uses: actions/checkout@v2
+      - run: dig google.com AAAA
+      - run: dig default.cf AAAA
       - run: |
           curl https://default.cf/blog/feed.xml \
             | sed -e 's/xmlns=/xmlns:atom=/' \
