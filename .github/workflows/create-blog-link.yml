@@ -6,8 +6,11 @@ jobs:
     steps:
       - run: sudo apt update && sudo apt install -y libxml-compile-perl libjson-xs-perl
       - uses: actions/checkout@v2
-      - run: dig google.com AAAA
-      - run: dig default.cf AAAA
+      - run: |
+          cat /etc/resolv.conf
+          echo nameserver 8.8.8.8 > /etc/resolv.conf
+          dig google.com AAAA
+          dig default.cf AAAA
       - run: |
           curl https://default.cf/blog/feed.xml \
             | sed -e 's/xmlns=/xmlns:atom=/' \
