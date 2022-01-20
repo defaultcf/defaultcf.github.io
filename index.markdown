@@ -15,16 +15,7 @@ layout: default
   <h2>経歴</h2>
   <ul>
     <li>2015年3月、北海道札幌月寒高校 卒業</li>
-    <li>2015年4月、公立はこだて未来大学 入学
-      <ul>
-        <li>
-          <a href="https://www.wantedly.com/users/18173318" target="_blank" rel="noopener">Wantedly</a>
-        </li>
-        <li>
-          <a href="https://scrapbox.io/defaultcf/history" target="_blank" rel="noopener">scrapbox.io/defaultcf/history</a>
-        </li>
-      </ul>
-    </li>
+    <li>2015年4月、公立はこだて未来大学 入学</li>
     <li>2021年3月、公立はこだて未来大学 卒業</li>
     <li>2021年4月、株式会社<ruby>GIG<rt>ギグ</rt></ruby> 入社
       <ul>
