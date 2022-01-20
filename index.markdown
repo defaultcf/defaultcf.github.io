@@ -9,7 +9,7 @@ layout: default
 </header>
 <main>
   <h2>こんにちは</h2>
-  <p>defaultcf です。ウェブの技術が好きです。あと Virtual YouTuber が好きです。</p>
+  <p>defaultcf です。ウェブの技術と Virtual YouTuber が好きです。</p>
   <p>最近は VR にハマっています。</p>
 
   <h2>経歴</h2>
