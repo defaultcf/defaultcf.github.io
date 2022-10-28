@@ -30,10 +30,9 @@ main {
   min-height: calc(100vh - var(--header-height) * 2);
   margin: 0 auto;
   padding: 30px;
-}
-
-h2:not(:first-of-type) {
-  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 li {
