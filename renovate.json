@@ -2,6 +2,8 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
   "timezone": "Asia/Tokyo",
+  "minimumReleaseAge": "7 days",
+  "automerge": false,
   "packageRules": [
     {
       "description": "GITHUB_TOKEN では .github/workflows を更新できないため github-actions は無効化",
