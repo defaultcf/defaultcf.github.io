@@ -3,6 +3,7 @@ layout: default
 ---
 
 <header>
+  <div class="blur"></div>
   <div class="header-inner">
     <h1>default.cf</h1>
   </div>

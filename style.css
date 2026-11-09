@@ -16,6 +16,25 @@ header {
   background-size: cover;
 }
 
+.blur {
+  /* header の背景画像の上に重ね、その背後をぼかす（テキストは兄弟要素なのでぼけない） */
+  position: absolute;
+  inset: 0;
+  animation: scrollAnimation linear both;
+  animation-timeline: scroll(root block);
+  /* スクロール開始から、ヘッダーが小さくなって固定されるまでの間に変化させる */
+  animation-range: 0 calc(100vh - var(--header-height));
+}
+
+@keyframes scrollAnimation {
+  from {
+    backdrop-filter: blur(0);
+  }
+  to {
+    backdrop-filter: blur(10px);
+  }
+}
+
 .header-inner {
   height: var(--header-height);
   width: 100vw;
