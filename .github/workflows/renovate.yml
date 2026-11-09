@@ -1,8 +1,8 @@
 name: Renovate
 on:
-  push: # デバッグ用
-  schedule:
-    - cron: "0 18 * * *" # 毎日 03:00 JST
+  # push: # デバッグ用
+  # schedule:
+  #   - cron: "0 18 * * *" # 毎日 03:00 JST
   workflow_dispatch:
 
 permissions:
