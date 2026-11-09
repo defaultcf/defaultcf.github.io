@@ -18,12 +18,5 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
 end
 
-# Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
-# and associated library.
-platforms :windows, :jruby do
-  gem "tzinfo", "~> 1.2"
-  gem "tzinfo-data"
-end
-
 # Ruby 3.0 以降は webrick が標準添付されないため、jekyll serve 用に明示する
 gem "webrick", "~> 1.9"
