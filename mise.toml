@@ -1,0 +1,9 @@
+[tools]
+ruby = "4.0.9"
+
+[tasks.install]
+run = "bundle install"
+
+[tasks.dev]
+depends = ["install"]
+run = "jekyll serve"
