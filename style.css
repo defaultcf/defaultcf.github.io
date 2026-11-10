@@ -65,3 +65,20 @@ li {
   gap: 30px;
   list-style-type: none;
 }
+
+.links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  gap: 0.3rem;
+
+  span.icon {
+    font-size: 2rem;
+  }
+
+  p {
+    margin: 0;
+    text-align: center;
+  }
+}

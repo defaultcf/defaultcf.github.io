@@ -68,32 +68,32 @@ layout: default
 
   <section>
     <h2>各種リンク</h2>
-    <ul class="links">
-      <li>
+    <div class="links">
+      <div>
         <a href="https://github.com/defaultcf" target="_blank" rel="noopener">
-          <i class="fab fa-github fa-fw fa-3x" title="GitHub"></i>GitHub
+          <span class="icon">🐙</span><p>GitHub</p>
         </a>
-      </li>
-      <li>
+      </div>
+      <div>
         <a href="https://twitter.com/defaultcf" target="_blank" rel="noopener">
-          <i class="fab fa-twitter fa-fw fa-3x" title="Twitter"></i>Twitter
+          <span class="icon">🐦</span><p>Twitter</p>
         </a>
-      </li>
-      <li>
+      </div>
+      <div>
         <a href="https://keybase.io/defaultcf" target="_blank" rel="noopener">
-          <i class="fab fa-keybase fa-fw fa-3x" title="Keybase"></i>Keybase
+          <span class="icon">🔑</span><p>Keybase</p>
         </a>
-      </li>
-      <li>
+      </div>
+      <div>
         <a href="https://scrapbox.io/defaultcf" target="_blank" rel="noopener">
-          <i class="fas fa-sticky-note fa-fw fa-3x" title="Scrapbox"></i>Scrapbox
+          <span class="icon">📝</span><p>Scrapbox</p>
         </a>
-      </li>
-      <li>
+      </div>
+      <div>
         <a href="https://www.wantedly.com/id/defaultcf" target="_blank" rel="noopener">
-          <i class="fas fa-link fa-fw fa-3x" title="Wantedly"></i>Wantedly
+          <span class="icon">💼</span><p>Wantedly</p>
         </a>
-      </li>
-    </ul>
+      </div>
+    </div>
   </section>
 </main>
