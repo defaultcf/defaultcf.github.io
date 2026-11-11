@@ -6,4 +6,4 @@ run = "bundle install"
 
 [tasks.dev]
 depends = ["install"]
-run = "jekyll serve"
+run = "bundle exec jekyll serve --livereload"

@@ -2,6 +2,10 @@ html, body {
   margin: 0;
   padding: 0;
   --header-height: 70px;
+  /* DSCF6455.jpg の 幅 / 高さ (1920x1280) */
+  --bg-ratio: 1.5;
+  /* background-size: cover 相当の幅（縦画面でも余白が出ない） */
+  --bg-cover-width: max(100vw, calc(100vh * var(--bg-ratio)));
 }
 
 header {
@@ -12,20 +16,36 @@ header {
   top: calc(var(--header-height) - 100vh);
   height: 100vh;
   background: no-repeat center fixed url(./DSCF6455.jpg);
-  background-size: cover;
-}
 
-.blur {
-  /* header の背景画像の上に重ね、その背後をぼかす（テキストは兄弟要素なのでぼけない） */
-  position: absolute;
-  inset: 0;
-  animation: scrollAnimation linear both;
+  animation: backgroundAnimation linear both;
   animation-timeline: scroll(root block);
   /* スクロール開始から、ヘッダーが小さくなって固定されるまでの間に変化させる */
   animation-range: 0 calc(100vh - var(--header-height));
 }
 
-@keyframes scrollAnimation {
+@keyframes backgroundAnimation {
+  from {
+    background-size: calc(var(--bg-cover-width) * 1.1);
+    background-position-y: 50%;
+  }
+  to {
+    background-size: calc(var(--bg-cover-width));
+    /* 100% = 画像の下端を表示領域の下端に揃える（＝最大限上にずれる。余白は出ない） */
+    background-position-y: 68%;
+  }
+}
+
+.overlay {
+  /* header の背景画像の上に重ね、その背後をぼかす（テキストは兄弟要素なのでぼけない） */
+  position: absolute;
+  inset: 0;
+  animation: overlayAnimation linear both;
+  animation-timeline: scroll(root block);
+  /* スクロール開始から、ヘッダーが小さくなって固定されるまでの間に変化させる */
+  animation-range: 0 calc(100vh - var(--header-height));
+}
+
+@keyframes overlayAnimation {
   from {
     backdrop-filter: blur(0);
   }
@@ -37,10 +57,23 @@ header {
 .header-inner {
   height: var(--header-height);
   width: 100vw;
-  position: sticky;
-  top: 0;
   text-align: center;
   color: white;
+
+  animation: titleAnimation linear both;
+  animation-timeline: scroll(root block);
+  /* header が小さくなって固定されるまでの間に、タイトルを上端まで移動させる */
+  animation-range: 0 calc(100vh - var(--header-height));
+}
+
+@keyframes titleAnimation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    /* header は flex で縦中央に置かれている。header 自身が上に流れる分を打ち消して、最終的に画面上端（0〜header-height）に収める */
+    transform: translateY(calc(50vh - var(--header-height) / 2));
+  }
 }
 
 main {
